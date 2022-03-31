@@ -81,7 +81,6 @@ export default {
         };
         leaflet.marker([ipInfo.value.lat, ipInfo.value.lng]).addTo(mymap);
         mymap.setView([ipInfo.value.lat, ipInfo.value.lng], 13);
-        console.log(result);
       } catch (err) {
         alert(err.message);
       }
