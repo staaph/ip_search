@@ -1,0 +1,32 @@
+<template>
+  <div
+    class="opacity-75 absolute mt-10 flex flex-col md:flex-row bg-gray-100 gap-y-3 gap-x-6 px-5 py-4 rounded-xl"
+  >
+    <!-- Item 1 -->
+    <div class="flex flex-col">
+      <h3 class="text-xs uppercase text-black">IP Adress</h3>
+      <span class="text-2xl">{{ ipInfo.adress }}</span>
+    </div>
+    <!-- Item 2 -->
+    <div class="flex flex-col">
+      <h3 class="text-xs uppercase">Location</h3>
+      <span class="text-2xl">{{ ipInfo.state }}</span>
+    </div>
+    <!-- Item 3 -->
+    <div class="flex flex-col">
+      <h3 class="text-xs uppercase">Timezone</h3>
+      <span class="text-2xl">UTC {{ ipInfo.timezone }}</span>
+    </div>
+    <!-- Item 4 -->
+    <div class="flex flex-col">
+      <h3 class="text-xs uppercase">Isp</h3>
+      <span class="text-2xl">{{ ipInfo.isp }}</span>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  props: ['ipInfo'],
+};
+</script>
