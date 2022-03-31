@@ -66,9 +66,7 @@ export default {
 
     const getIpInfo = async () => {
       try {
-        const data = await axios.get(
-          `https://geo.ipify.org/api/v2/country,city?apiKey=at_IHLnxkiPdY3h6J0XxspzeOFb2P614&ipAddress=${queryIP.value}`
-        );
+        const data = await axios.get(`localhost:8000/api/ip/${queryIP.value}`);
 
         const result = data.data;
         ipInfo.value = {

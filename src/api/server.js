@@ -1,15 +1,22 @@
-import express from 'express';
-import axios from 'axios';
+const express = require('express');
+const axios = require('axios');
 
 const app = express();
 
-app.get('/api', async (req, res) => {
-  const response = await axios.get(
-    'https://geo.ipify.org/api/v2/country,city?apiKey=at_IHLnxkiPdY3h6J0XxspzeOFb2P614&ipAddress=8.8.8.8'
-  );
-  res.send(response);
-
-  return response;
+app.get('/api/ip/:query', async (req, res) => {
+  try {
+    const query = req.params.query;
+    const data = await axios.get(
+      `https://geo.ipify.org/api/v2/country,city?apiKey=at_IHLnxkiPdY3h6J0XxspzeOFb2P614&ipAddress=${query}`
+    );
+    res.send(data.data);
+  } catch (error) {
+    res.send(error);
+  }
 });
 
-app.listen(8000);
+const PORT = 8000;
+
+app.enable('cors');
+
+app.listen(PORT, () => console.log('Server is running'));
