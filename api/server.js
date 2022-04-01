@@ -1,12 +1,13 @@
 const express = require('express');
 const axios = require('axios');
+require('dotenv').config({ path: './.env' });
 
 const app = express();
 
 app.get('/api/:ip', async (req, res) => {
   try {
     const data = await axios.get(
-      `https://geo.ipify.org/api/v2/country,city?apiKey=at_IHLnxkiPdY3h6J0XxspzeOFb2P614&ipAddress=${req.params.ip}`
+      `https://geo.ipify.org/api/v2/country,city?apiKey=${process.env.apiKey}&ipAddress=${req.params.ip}`
     );
     res.send(data.data);
   } catch (error) {
