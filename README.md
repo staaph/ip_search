@@ -2,7 +2,7 @@
 
 IP Adress Search with Vue3, Leaflet, Mapbox and Geoipify API.
 There is no Backend. API Keys were requested for this project only. They are exposed.
-Therefore you might want to disable Adbker to avoid CORS Error.
+Therefore you might want to disable Adblocker to avoid CORS Error.
 
 ## Recommended IDE Setup
 
