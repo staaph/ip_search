@@ -22,7 +22,7 @@
         v-if="error"
         class="bg-white text-bold text-red-600 rounded-lg mt-2 p-1 flex mx-auto justify-center"
       >
-        Please provide valid id
+        Please provide a valid IP Adress
       </div>
       <!-- IP Info-->
       <IPInfo v-if="ipInfo && !error" v-bind:ipInfo="ipInfo" />
