@@ -77,7 +77,7 @@ onMounted(async () => {
 
   leaflet
     .tileLayer(
-      'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}',
+      `https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=${process.env.ACCESS_TOKEN}`,
       {
         attribution:
           'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -96,7 +96,7 @@ onMounted(async () => {
 const getIpInfo = async () => {
   try {
     const data = await axios.get(
-      `https://geo.ipify.org/api/v2/country,city?apiKey=at_IHLnxkiPdY3h6J0XxspzeOFb2P614&ipAddress=${queryIP.value}`
+      `https://geo.ipify.org/api/v2/country,city?apiKey=${process.env.API_KEY}&ipAddress=${queryIP.value}`
     );
 
     const result = data.data;
