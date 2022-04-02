@@ -4,23 +4,25 @@
   >
     <!-- Item 1 -->
     <div class="flex flex-col">
-      <h3 class="text-xs uppercase text-black">IP Adress</h3>
-      <span class="text-2xl">{{ ipInfo.adress }}</span>
+      <h3 class="text-xs uppercase text-black font-bold sm:font-normal">
+        IP Adress
+      </h3>
+      <span class="sm:text-2xl">{{ ipInfo.adress }}</span>
     </div>
     <!-- Item 2 -->
     <div class="flex flex-col">
-      <h3 class="text-xs uppercase">Location</h3>
-      <span class="text-2xl">{{ ipInfo.state }}</span>
+      <h3 class="text-xs uppercase font-bold sm:font-normal">Location</h3>
+      <span class="sm:text-2xl">{{ ipInfo.state }}</span>
     </div>
     <!-- Item 3 -->
     <div class="flex flex-col">
-      <h3 class="text-xs uppercase">Timezone</h3>
-      <span class="text-2xl">UTC {{ ipInfo.timezone }}</span>
+      <h3 class="text-xs uppercase font-bold sm:font-normal">Timezone</h3>
+      <span class="sm:text-2xl">UTC {{ ipInfo.timezone }}</span>
     </div>
     <!-- Item 4 -->
     <div class="flex flex-col">
-      <h3 class="text-xs uppercase">Isp</h3>
-      <span class="text-2xl">{{ ipInfo.isp }}</span>
+      <h3 class="text-xs uppercase font-bold sm:font-normal">Isp</h3>
+      <span class="sm:text-2xl">{{ ipInfo.isp }}</span>
     </div>
   </div>
 </template>
