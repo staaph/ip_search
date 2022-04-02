@@ -1,7 +1,6 @@
 {
   "name": "ip_search",
   "version": "0.0.0",
-  
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -10,7 +9,6 @@
   },
   "dependencies": {
     "axios": "^0.26.1",
-    "express": "^4.17.3",
     "leaflet": "^1.7.1",
     "pinia": "^2.0.11",
     "vue": "^3.2.31",
